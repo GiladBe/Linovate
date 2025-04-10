@@ -4,18 +4,16 @@ export interface ProductInterface {
     description: string;
     price: string;
     image_url: string;
+    reviews:Array<ReviewInterface>,
+  
+    
   }
   
   export interface ReviewInterface {
     id: number;
-    productId: number;
-    userId: number;
+    product_id: number;
     rating: number;
-    comment: string;
+    review: string;
+    reviewer:string
   }
   
-  export interface UserInterface {
-    id: number;
-    username: string;
-    email: string;
-  }
