@@ -36,7 +36,6 @@ const HomePage: NextPage<HomePageProps> = ({ products }) => {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
-    // Get the base URL based on the environment
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
     const res = await axios.get(`${baseUrl}/api/products`);
     
