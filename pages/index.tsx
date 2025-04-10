@@ -33,9 +33,13 @@ const HomePage: NextPage<HomePageProps> = ({ products }) => {
   );
 };
 
+
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
-    const res = await axios.get('http://localhost:3000/api/products');
+    // Get the base URL based on the environment
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+    const res = await axios.get(`${baseUrl}/api/products`);
+    
     return { props: { products: res.data.rows } };
   } catch (error) {
     console.error(error);
