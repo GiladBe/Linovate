@@ -1,40 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Linovate
+
+This is a web application built with Next.js that allows users to view a product catalog. It integrates with a PostgreSQL database to display products and their reviews.
+
+## Features
+
+- Display a catalog of products with their names, descriptions, and prices.
+- View product details and reviews.
+- Add and leave reviews for products.
+- Supports server-side rendering using Next.js.
+
+## Technologies Used
+
+- **Next.js** for server-side rendering and building the React application.
+- **Axios** for making API requests.
+- **Tailwind CSS** for styling the components.
+- **Node.js** for backend API (if applicable).
+- **PostgreSQL** for storing product and review data.
 
 ## Getting Started
 
-First, run the development server:
+Follow these instructions to set up the project locally:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You need to have **Node.js** and **npm** (or **yarn**) installed.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- Install [Node.js](https://nodejs.org/) (which includes npm).
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Installation
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+1. Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```bash
+   git clone https://github.com/GiladBe/Linovate.git
+   cd Linovate
 
-## Learn More
+2. Install the dependencies:
+  npm install
 
-To learn more about Next.js, take a look at the following resources:
+3. set up environment variables
+ Create a .env file in the root directory of the project wth the following keys : 
+ 
+  DATABASE_URL=postgresql://postgres.dhfncwynzmfjwziklirl:%40L%25d3tWG-zKp%26hv@aws-0-eu-central-1.pooler.supabase.com:5432/postgres
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+ NODE_ENV= development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+ PASSWORD = @L%d3tWG-zKp&hv
 
-## Deploy on Vercel
+ NEXT_PUBLIC_BASE_URL=https://linovate-giladbes-projects.vercel.app
+  
+4. Run the development server: 
+ npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
